@@ -12,7 +12,7 @@ function writePassword() {
 
 function generatePassword() {
   //Define password character length
-  var PassLen = prompt("Please input a numeric value between 8 and 128 for password length.");
+  // var PassLen = prompt("Please input a numeric value between 8 and 128 for password length.");
     
   //Check if input is actually a number and between 8 and 128 value
   // while (isNaN(parseInt(PassLen))) {
@@ -43,7 +43,14 @@ function generatePassword() {
     var PassNum = prompt("Please input numeric values to be used.");  
   }
 
-  // var PassSpec = prompt("Please input special characters to be used.")
+  var PassSpec = prompt("Please input special characters to be used.");
+
+  //Check whether it's only special charaters
+  
+  while (/^[^a-zA-Z0-9]*$/.test(PassSpec) == false) {
+    var PassSpec = prompt("Please input special characters to be used.");  
+  }
+
 }
 
 // Add event listener to generate button
