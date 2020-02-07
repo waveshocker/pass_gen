@@ -27,25 +27,27 @@ function generatePassword() {
 
   var PassUpper = prompt("Please input y or n for use of Uppercase in Password.");
 
-  while (PassUpper.toLowerCase() !== "y" || PassUpper.toLowerCase() !== "n") {
+  console.log(PassUpper.toLowerCase());
+
+  while ((PassUpper.toLowerCase() !== "y") && (PassUpper.toLowerCase() !== "n")) {
     var PassUpper = prompt("Please input y or n for use of Uppercase in Password.");
   }
 
   var PassLower = prompt("Please input y or n for use of Lowercase in Password.");
-
-  while (PassLower.toLowerCase() !== "y" || PassLower.toLowerCase !== "n") {
+  
+  while ((PassLower.toLowerCase() !== "y") && (PassLower.toLowerCase() !== "n")) {
     var PassLower = prompt("Please input y or n for use of Lowercase in Password.");
   }
 
   var PassNum = prompt("Please input y or n for use of numeric values in Password.");
 
-  while (PassNum.toLowerCase() !== "y" || PassNum.toLowerCase() !== "n") {
+  while ((PassNum.toLowerCase() !== "y") && (PassNum.toLowerCase() !== "n")) {
     var PassNum = prompt("Please input y or n for use of numeric values in Password.");  
   }
 
   var PassSpec = prompt("Please input y or n for use of special characters in Password.");
 
-  while (PassNum.toLowerCase() !== "y" || PassNum.toLowerCase() !== "n") {
+  while ((PassNum.toLowerCase() !== "y") && (PassNum.toLowerCase() !== "n")) {
     var PassNum = prompt("Please input y or n for use of special characters in Password.");  
   }
   
