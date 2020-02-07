@@ -16,18 +16,13 @@ function generatePassword() {
     
   //Check if input is actually a number and between 8 and 128 value
   // while (isNaN(parseInt(PassLen))) {
-  //   PassLen = prompt("Please input a numeric Value between 8 and 128 for password length.");    
-  // }
-
-  // while (parseInt(PassLen) < 8 || parseInt(PassLen) > 128) {
-  //   PassLen = prompt("Please input a numeric Value between 8 and 128 for password length.");
-  // }
-   
-
+  PassLen = prompt("Please input a numeric Value between 8 and 128 for password length.");    
+  
+  while ((isNaN(parseInt(PassLen))) || (parseInt(PassLen) < 8) || (parseInt(PassLen) > 128)) {
+    PassLen = prompt("Please input a numeric Value between 8 and 128 for password length.");
+  }
 
   var PassUpper = prompt("Please input y or n for use of Uppercase in Password.");
-
-  console.log(PassUpper.toLowerCase());
 
   while ((PassUpper.toLowerCase() !== "y") && (PassUpper.toLowerCase() !== "n")) {
     var PassUpper = prompt("Please input y or n for use of Uppercase in Password.");
