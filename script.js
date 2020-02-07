@@ -12,10 +12,9 @@ function writePassword() {
 
 function generatePassword() {
   //Define password character length
-  // var PassLen = prompt("Please input a numeric value between 8 and 128 for password length.");
-    
-  //Check if input is actually a number and between 8 and 128 value
-  // while (isNaN(parseInt(PassLen))) {
+  // temporary password
+  var tempass; 
+
   PassLen = prompt("Please input a numeric Value between 8 and 128 for password length.");    
   
   while ((isNaN(parseInt(PassLen))) || (parseInt(PassLen) < 8) || (parseInt(PassLen) > 128)) {
@@ -28,16 +27,29 @@ function generatePassword() {
     var PassUpper = prompt("Please input y or n for use of Uppercase in Password.");
   }
 
+  if (PassUpper.toLowerCase() === "y") {
+    var upperchar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+  }
+
   var PassLower = prompt("Please input y or n for use of Lowercase in Password.");
   
   while ((PassLower.toLowerCase() !== "y") && (PassLower.toLowerCase() !== "n")) {
     var PassLower = prompt("Please input y or n for use of Lowercase in Password.");
   }
 
+  if (PassLower.toLowerCase() === "y") {
+    var lowerchar = 'abcdefghijklmnopqrstuvwxyz';
+  }
+
   var PassNum = prompt("Please input y or n for use of numeric values in Password.");
 
   while ((PassNum.toLowerCase() !== "y") && (PassNum.toLowerCase() !== "n")) {
     var PassNum = prompt("Please input y or n for use of numeric values in Password.");  
+  }
+
+  if (PassNum.toLowerCase() === "y") {
+    var numchar = '0123456789';
   }
 
   var PassSpec = prompt("Please input y or n for use of special characters in Password.");
